@@ -1,0 +1,24 @@
+{
+  "name": "demo-oom",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "clear": "rm -rf ./flamegraph",
+    "stress": "autocannon -a 1000 'http://127.0.0.1:3000/list?size=10000' && autocannon -a 1000 'http://127.0.0.1:3000/sum?a=5000&b=5000'",
+    "profile": "0x --open --name flamegraph --output-dir {name} src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "4.28.1"
+  },
+  "devDependencies": {
+    "autocannon": "7.15.0",
+    "0x": "5.7.0"
+  }
+}
