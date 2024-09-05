@@ -30,8 +30,10 @@ curl 'http://127.0.0.1:3000/print?val=42'
 
 ## Detect OoM
 
-Run `npm run profile` on one window (wait for `🔥  Profiling` message), then `npm run stress` on another one.
+Run `npm run profile` on one window (wait for `🔥  Profiling` message), then `npm run stress` on another one:
+![Run stress command](./img/stress.png)
+
 Once the `stress` command is done, stop the `profile` command (with `CTRL-C`).
 
 You should see the message `🔥 Flamegraph generated in` and a new browser tab should be opened with a similar result to what you can see in the `./out` folder:
-![OoM profiling result](./img/example.png)
+![OoM profiling result](./img/profile.png)
