@@ -1,6 +1,6 @@
 # demo-oom
 
-The goal of this demo is to demonstrate how to debug Out of Memory issues.
+Demo project to demonstrate how to debug Out of Memory issues.
 
 ## Setup
 

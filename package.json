@@ -1,7 +1,7 @@
 {
   "name": "demo-oom",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo project to demonstrate how to debug Out of Memory issues",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
@@ -11,9 +11,8 @@
     "stress": "autocannon -a 1000 'http://127.0.0.1:3000/sum?a=5000&b=5000' && autocannon -a 1000 'http://127.0.0.1:3000/print?val=10000' && autocannon -a 1000 'http://127.0.0.1:3000/list?size=10000'",
     "profile": "0x --open --name flamegraph --output-dir {name} src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "rozzilla",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "fastify": "4.28.1"
   },
