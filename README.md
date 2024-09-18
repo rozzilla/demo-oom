@@ -30,6 +30,25 @@ curl 'http://127.0.0.1:3000/print?val=42'
 
 ## Detect OoM
 
+### Easy
+
+- Run `npm run start`
+- Open the `Activity monitor` (or the equivalent for your OS) and be sure to show the `Memory` tab and to filter by `node`
+- Run `npm run stress`
+- See how the `Memory` value change over time
+
+### Advanced
+
+- Run `npm run inspect`
+- Open a new Chrome tab `chrome://inspect/#devices`
+- Click `Inspect` on the `Remote Target` pointing to `demo-oom/src/index.js`
+- On the `Memory` tab, selct `Allocation sampling` and click `Start`
+- Run `npm run stress`
+- Once finished, click `Stop` on the DevTools opened window
+- Analyze the results, in particular the `Total Size`
+
+## Detect inefficient code
+
 Run `npm run profile` on one window (wait for `🔥  Profiling` message), then `npm run stress` on another one:
 ![Run stress command](./img/stress.png)
 
