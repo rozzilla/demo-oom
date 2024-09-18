@@ -1,6 +1,6 @@
 # demo-oom
 
-Demo project to demonstrate how to debug Out of Memory issues.
+Demo project to demonstrate how to debug Out of Memory issues, and more in general performance bottlenecks.
 
 ## Setup
 
@@ -47,7 +47,7 @@ curl 'http://127.0.0.1:3000/print?val=42'
 - Once finished, click `Stop` on the DevTools opened window
 - Analyze the results, in particular the `Total Size`
 
-## Detect inefficient code
+## Detect performance bottlenecks
 
 Run `npm run profile` on one window (wait for `🔥  Profiling` message), then `npm run stress` on another one:
 ![Run stress command](./img/stress.png)
